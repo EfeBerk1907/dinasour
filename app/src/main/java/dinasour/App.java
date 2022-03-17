@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +30,9 @@ public class App {
         return false;
     }
     public static void main(String[] args) {
+
+        System.out.println(new App().getGreeting());
+
         port(getHerokuAssignedPort());
 
         get("/", (req, res) -> "Hello, World");
@@ -82,5 +83,5 @@ public class App {
     }
 }
 
-}
+
   
